@@ -3,7 +3,14 @@ USER root
 
 WORKDIR /app
 
-RUN apt-get install -y vim less
-RUN pip install --upgrade pip
-RUN pip install --upgrade setuptools
+RUN pip install Flask
 
+RUN pip install jinja2
+
+RUN pip install beautifulsoup4
+
+RUN pip install requests
+
+RUN pip install openpyxl
+
+CMD ["python", "main.py"]
